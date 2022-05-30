@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block contactactive %}active{% endblock contactactive %}
+<style>
+    .container{
+    min-height: 100vh;
+    }
+</style>
+{% block body %}
+<div class="container my-4">
+<h2 class="py-3"> Contate-nos</h2>
+    <form>
+        <div class="form-group">
+    <label for="exampleFormControlInput1">Nome</label>
+    <input type="text" class="form-control" id="name" name="name"
+           placeholder="Coloque o seu nome aqui">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email"
+           aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seu email com alguém.</small>
+  </div>
+        <div class="form-group">
+    <label for="exampleFormControlInput1">Número de Telefone</label>
+    <input type="tel" class="form-control" id="numero" name="numero"
+           placeholder="Coloque o seu número de telefone aqui">
+  </div>
+  <div class="form-group">
+    <label for="desc">Como podemos ajudar você?</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+{% endblock body %}

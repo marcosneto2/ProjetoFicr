@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block blogactive %}active{% endblock blogactive %}
+<style>
+    .container{
+    min-height:100vh;
+    }
+</style>
+{% block body %}
+<div class="container">
+
+<h2 class="my-3"> Blog sobre Saude e Bem-estar</h2>
+{% for blog in blogs %}
+
+<div class="my-4">
+    <h4 class="mt-0 text-dark"> <a href="/blogpost/{{blog.slug}}" class="text-dark"> {{blog.title}}</a> </h4>
+    <div class="my-2">
+        {{blog.content|slice:205}}...
+    </div>
+  <a href="/blogpost/{{blog.slug}}" class="text-dark"> <button class="btn btn-primary">Leia mais...</button></a>
+</div>
+{% endfor %}
+</div>
+{% endblock body %}
