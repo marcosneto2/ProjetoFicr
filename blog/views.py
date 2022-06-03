@@ -7,7 +7,7 @@ def home(request):
 
 def blog(request):
     blogs = Blog.objects.all()
-    context = {'blogs' : blogs}
+    context = {'blogs': blogs}
     return render(request, 'bloghome.html', context)
 
 def blogpost(request, slug):
