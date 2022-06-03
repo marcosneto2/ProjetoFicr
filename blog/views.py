@@ -12,7 +12,7 @@ def blog(request):
 
 def blogpost(request, slug):
     blog = Blog.objects.filter(slug=slug).first()
-    context = {'blog': blog}
+    context = {'blogs': blog}
 
     return render(request, 'blogpost.html', context)
 
